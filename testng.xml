@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SFS Suite">
+	<listeners>
+		<listener class-name="Listener.TestListener" />
+	</listeners>
+	<test name="VerifyTitle">
+		<classes>
+			<class name="verifyTitle.VerifyTitle"></class>
+		</classes>
+	</test>
+	<test name="NoCredentials">
+		<classes>
+			<class name="loginTest.InvalidLogin"></class>
+		</classes>
+	</test>
+	<test name="ValidLogin">
+		<parameter name="stateId" value="101" />
+		<parameter name="userName" value="Phaneendra" />
+		<parameter name="password" value="Phani#1512" />
+		<parameter name="expectedUserName"
+			value="Phaneendra Valaboju" />
+		<classes>
+			<class name="validTestcases.ValidLogin"></class>
+		</classes>
+	</test>
+
+	<test name="DarkDragon_38">
+		<classes>
+			<class name="validTestcases.DarkDragon_38"></class>
+		</classes>
+	</test>
+
+
+
+	<!-- <test name="EmailReport"> <classes> <class name="emailReport.EmailReport"></class> 
+		</classes> </test> -->
+</suite> <!-- Suite -->
